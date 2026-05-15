@@ -322,8 +322,32 @@ popupOverlay.addEventListener("click", (e) => {
 // ======================
 
 function goToTrack(){
-
-  window.location.href =
-    "track-your-package.html";
-
+  // Save purchase history
+  const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+  if(cart.length){
+    const history = JSON.parse(localStorage.getItem("purchaseHistory")) || [];
+    const order = {
+      id: "ORD-" + Date.now().toString().slice(-8),
+      date: new Date().toISOString(),
+      items: cart,
+      subtotal: subtotal,
+      delivery: delivery,
+      total: total,
+      method: selectedMethod,
+      status: "Diproses"
+    };
+    history.unshift(order);
+    localStorage.setItem("purchaseHistory", JSON.stringify(history));
+    // Update seller stats
+    const sales = JSON.parse(localStorage.getItem("sellerSales")) || [];
+    cart.forEach(it => sales.push({
+      product: it.name, qty: it.qty, price: it.price,
+      total: it.price*it.qty, date: new Date().toISOString(),
+      orderId: order.id
+    }));
+    localStorage.setItem("sellerSales", JSON.stringify(sales));
+    // Clear cart
+    localStorage.removeItem("cartItems");
+  }
+  window.location.href = "Riwayat Pemesanan.html";
 }

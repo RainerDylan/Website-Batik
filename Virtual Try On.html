@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Try-On | PETIK</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Virtual Try On.css">
+</head>
+<body>
+<nav class="petik-navbar">
+  <div class="petik-nav-inner">
+    <a href="Home page.html" class="petik-logo">
+      <img src="NAVBAR/logo-18.png" alt="PETIK" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="petik-logo-text" style="display:none">
+        <span class="petik-logo-main">PETIK</span>
+        <span class="petik-logo-sub">Pekalongan's Batik</span>
+      </div>
+    </a>
+    <button class="petik-burger" id="petikBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="petik-nav-menu" id="petikNavMenu">
+      <a href="Home page.html" data-nav="home"><img src="NAVBAR/Home.png" alt="" onerror="this.style.display='none'"><span>Beranda</span></a>
+      <a href="Tentang batik pekalongan.html" data-nav="tentang"><img src="NAVBAR/tentang batik pekalongan.png" alt="" onerror="this.style.display='none'"><span>Tentang Batik<br>Pekalongan</span></a>
+      <a href="Jenis batik page.html" data-nav="jenis"><img src="NAVBAR/Jenis Batik.png" alt="" onerror="this.style.display='none'"><span>Jenis Batik<br>Pekalongan</span></a>
+      <a href="Catalogue.html" data-nav="katalog"><img src="NAVBAR/Catalogue.png" alt="" onerror="this.style.display='none'"><span>Katalog</span></a>
+      <a href="Testimoni.html" data-nav="testimoni"><img src="NAVBAR/Testimoni.png" alt="" onerror="this.style.display='none'"><span>Testimoni</span></a>
+      <a href="FAQ.html" data-nav="faq"><img src="NAVBAR/FAQ.png" alt="" onerror="this.style.display='none'"><span>FAQ</span></a>
+      <div class="petik-nav-right">
+        <a href="Riwayat Pemesanan.html" data-nav="riwayat"><img src="NAVBAR/Riwayat.png" alt="" onerror="this.style.display='none'"><span>Riwayat<br>Pemesanan</span></a>
+        <a href="Keranjang.html" class="petik-cart-link" data-nav="keranjang"><img src="NAVBAR/Keranjang.png" alt="" onerror="this.style.display='none'"><span>Keranjang</span><span class="petik-cart-badge" id="petikCartBadge">0</span></a>
+        <a href="profil.html" data-nav="profil"><img src="NAVBAR/Profile.png" alt="" onerror="this.style.display='none'"><span>Profil</span></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="page-wrap">
+  <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+    <h1 class="page-title" style="margin:0;">Virtual Try-On</h1>
+    <span class="beta-badge">BETA</span>
+  </div>
+  <p class="page-sub">Coba pakai batik secara virtual menggunakan kamera kamu. Pastikan kamu berdiri tegak menghadap kamera.</p>
+
+  <div class="tryon-grid">
+    <div class="cam-stage card">
+      <video id="cam" autoplay playsinline muted></video>
+      <img id="overlay" src="" alt="">
+      <div id="camMsg" class="cam-msg">
+        <div style="font-size:48px;">📷</div>
+        <h3>Aktifkan Kamera</h3>
+        <p style="color:#666;margin:8px 0 16px;">Kami akan menampilkan pakaian batik di tubuhmu.</p>
+        <button class="gold-btn" id="startCam">Mulai Kamera</button>
+      </div>
+    </div>
+    <div class="tryon-side">
+      <div class="card">
+        <h3 style="margin-bottom:12px;">Pilih Batik</h3>
+        <div class="tryon-products" id="tryonProducts"></div>
+      </div>
+      <div class="card" style="margin-top:18px;">
+        <h3 style="margin-bottom:12px;">Sesuaikan</h3>
+        <label class="ctrl">Ukuran<input type="range" id="scale" min="40" max="120" value="70"></label>
+        <label class="ctrl">Posisi Vertikal<input type="range" id="posY" min="-30" max="60" value="20"></label>
+        <label class="ctrl">Posisi Horizontal<input type="range" id="posX" min="-30" max="30" value="0"></label>
+        <label class="ctrl">Transparansi<input type="range" id="opacity" min="50" max="100" value="92"></label>
+        <button class="dark-btn" id="snapshot" style="width:100%;margin-top:10px;">📸 Ambil Foto</button>
+      </div>
+      <div class="card" style="margin-top:18px;background:#fff8e0;border-color:#f0e2a8;">
+        <h4 style="color:#7a5c00;margin-bottom:6px;">⚠️ Catatan Beta</h4>
+        <p style="font-size:13px;color:#7a5c00;">Fitur ini menggunakan overlay sederhana. Versi mendatang akan menggunakan body-tracking AI untuk hasil yang lebih akurat.</p>
+      </div>
+    </div>
+  </div>
+  <canvas id="snapCanvas" style="display:none;"></canvas>
+</main>
+
+<footer class="petik-footer">
+  <div class="petik-footer-inner">
+    <div class="petik-footer-col petik-footer-brand">
+      <h3>PETIK</h3>
+      <p class="petik-tag">Pekalongan's Batik</p>
+      <p class="petik-foot-desc">Melestarikan warisan Batik Pekalongan melalui platform digital yang menghubungkan pengrajin lokal dengan pencinta batik di seluruh Indonesia.</p>
+    </div>
+    <div class="petik-footer-col">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="Home page.html">Beranda</a></li>
+        <li><a href="Tentang batik pekalongan.html">Tentang Batik</a></li>
+        <li><a href="Jenis batik page.html">Jenis Batik</a></li>
+        <li><a href="Catalogue.html">Katalog</a></li>
+      </ul>
+    </div>
+    <div class="petik-footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="Testimoni.html">Testimoni</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="Keranjang.html">Keranjang</a></li>
+        <li><a href="Riwayat Pemesanan.html">Riwayat Pemesanan</a></li>
+        <li><a href="Seller Dashboard.html">Seller Dashboard</a></li>
+      </ul>
+    </div>
+    <div class="petik-footer-col">
+      <h4>Kontak</h4>
+      <ul class="petik-contact">
+        <li>📍 Pekalongan, Jawa Tengah</li>
+        <li>✉️ hello@petikbatik.id</li>
+        <li>📞 +62 812 3456 7890</li>
+      </ul>
+      <div class="petik-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="TikTok">TT</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+  </div>
+  <div class="petik-footer-bottom">
+    <span>© 2026 PETIK — Pekalongan's Batik. All rights reserved.</span>
+    <span>Made with ❤️ for Indonesian heritage.</span>
+  </div>
+</footer>
+<script>
+(function(){
+  var page = (location.pathname.split('/').pop() || 'Home page.html').toLowerCase();
+  document.querySelectorAll('.petik-nav-menu a, .petik-nav-right a').forEach(function(a){
+    var href = (a.getAttribute('href')||'').toLowerCase();
+    if(href && href === page) a.classList.add('is-active');
+  });
+  var burger = document.getElementById('petikBurger');
+  var menu = document.getElementById('petikNavMenu');
+  if(burger && menu){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open'); menu.classList.toggle('open');
+    });
+  }
+  function refreshCart(){
+    var cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    var badge = document.getElementById('petikCartBadge');
+    if(badge){ badge.textContent = cart.reduce(function(t,i){return t+(i.qty||1);},0); }
+  }
+  window.petikRefreshCart = refreshCart; refreshCart();
+})();
+</script>
+<script src="Virtual Try On.js"></script></body></html>
