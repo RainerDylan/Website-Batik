@@ -9,6 +9,66 @@
   <link rel="stylesheet" href="profil.css">
 </head>
 <body>
+<!-- ===== NAVBAR ===== -->
+<nav class="petik-navbar">
+  <div class="petik-nav-inner">
+    <a href="Home page.html" class="petik-logo">
+      <img src="NAVBAR/logo-18.png" alt="PETIK" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="petik-logo-text" style="display:none">
+        <span class="petik-logo-main">PETIK</span>
+        <span class="petik-logo-sub">Pekalongan's Batik</span>
+      </div>
+    </a>
+
+    <button class="petik-burger" id="petikBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="petik-nav-menu" id="petikNavMenu">
+      <a href="Home page.html" data-nav="home">
+        <img src="NAVBAR/Home.png" alt="" onerror="this.style.display='none'">
+        <span>Beranda</span>
+      </a>
+      <a href="Tentang batik pekalongan.html" data-nav="tentang">
+        <img src="NAVBAR/tentang batik pekalongan.png" alt="" onerror="this.style.display='none'">
+        <span>Tentang Batik<br>Pekalongan</span>
+      </a>
+      <a href="Jenis batik page.html" data-nav="jenis">
+        <img src="NAVBAR/Jenis Batik.png" alt="" onerror="this.style.display='none'">
+        <span>Jenis Batik<br>Pekalongan</span>
+      </a>
+      <a href="Catalogue.html" data-nav="katalog">
+        <img src="NAVBAR/Catalogue.png" alt="" onerror="this.style.display='none'">
+        <span>Katalog</span>
+      </a>
+      <a href="Testimoni.html" data-nav="testimoni">
+        <img src="NAVBAR/Testimoni.png" alt="" onerror="this.style.display='none'">
+        <span>Testimoni</span>
+      </a>
+      <a href="FAQ.html" data-nav="faq">
+        <img src="NAVBAR/FAQ.png" alt="" onerror="this.style.display='none'">
+        <span>FAQ</span>
+      </a>
+
+      <div class="petik-nav-right">
+        <a href="Halaman toko 1.html" data-nav="riwayat">
+          <img src="NAVBAR/Riwayat.png" alt="" onerror="this.style.display='none'">
+          <span>Riwayat<br>Pemesanan</span>
+        </a>
+        <a href="Keranjang.html" class="petik-cart-link" data-nav="keranjang">
+          <img src="NAVBAR/Keranjang.png" alt="" onerror="this.style.display='none'">
+          <span>Keranjang</span>
+          <span class="petik-cart-badge" id="petikCartBadge">0</span>
+        </a>
+        <a href="profil.html" data-nav="profil">
+          <img src="NAVBAR/Profile.png" alt="" onerror="this.style.display='none'">
+          <span>Profil</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
 
   <!-- SIGN IN -->
   <section class="auth-page" id="signinPage">
@@ -209,5 +269,187 @@
   </section>
 
   <script src="profil.js"></script>
+<!-- ===== FOOTER ===== -->
+<footer class="petik-footer">
+  <div class="petik-footer-inner">
+    <div class="petik-footer-col petik-footer-brand">
+      <h3>PETIK</h3>
+      <p class="petik-tag">Pekalongan's Batik</p>
+      <p class="petik-foot-desc">
+        Melestarikan warisan Batik Pekalongan melalui platform
+        digital yang menghubungkan pengrajin lokal dengan pencinta
+        batik di seluruh Indonesia.
+      </p>
+    </div>
+
+    <div class="petik-footer-col">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="Home page.html">Beranda</a></li>
+        <li><a href="Tentang batik pekalongan.html">Tentang Batik</a></li>
+        <li><a href="Jenis batik page.html">Jenis Batik</a></li>
+        <li><a href="Catalogue.html">Katalog</a></li>
+      </ul>
+    </div>
+
+    <div class="petik-footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="Testimoni.html">Testimoni</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="Keranjang.html">Keranjang</a></li>
+        <li><a href="profil.html">Profil Saya</a></li>
+      </ul>
+    </div>
+
+    <div class="petik-footer-col">
+      <h4>Kontak</h4>
+      <ul class="petik-contact">
+        <li>📍 Pekalongan, Jawa Tengah</li>
+        <li>✉️ hello@petikbatik.id</li>
+        <li>📞 +62 812 3456 7890</li>
+      </ul>
+      <div class="petik-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="TikTok">TT</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="petik-footer-bottom">
+    <span>© 2026 PETIK — Pekalongan's Batik. All rights reserved.</span>
+    <span>Made with ❤️ for Indonesian heritage.</span>
+  </div>
+</footer>
+
+
+<script>
+/* PETIK — Global interactions, cart badge, mobile nav, reveals */
+(function(){
+  // Active nav highlighting
+  var page = (location.pathname.split('/').pop() || 'Home page.html').toLowerCase();
+  document.querySelectorAll('.petik-nav-menu a, .petik-nav-right a').forEach(function(a){
+    var href = (a.getAttribute('href')||'').toLowerCase();
+    if(href && href === page) a.classList.add('is-active');
+  });
+
+  // Burger menu
+  var burger = document.getElementById('petikBurger');
+  var menu = document.getElementById('petikNavMenu');
+  if(burger && menu){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+  }
+
+  // Cart badge
+  function refreshCart(){
+    try{
+      var cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+      var count = cart.reduce(function(s,i){ return s + (i.qty||1); }, 0);
+      document.querySelectorAll('#petikCartBadge, #cart-count').forEach(function(el){
+        el.textContent = count;
+        el.classList.toggle('has-items', count > 0);
+        if(el.id==='cart-count' && count===0) el.style.display='none';
+        else if(el.id==='cart-count') el.style.display='';
+      });
+    }catch(e){}
+  }
+  refreshCart();
+  window.addEventListener('storage', refreshCart);
+  window.petikRefreshCart = refreshCart;
+
+  // Reveal-on-scroll
+  var revealSelectors = ['.hero-text','.hero-image','.card','.testimonial-card',
+    '.faq-item','.product-card','.toko-card','.tool-card','.summary-content',
+    '.cart-item','section h1','section h2','form','.checkout-left','.checkout-right',
+    '.right-side','.left-side','.product-content','.review-card','.profile-card'];
+  revealSelectors.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el){
+      if(!el.hasAttribute('data-reveal')) el.setAttribute('data-reveal','');
+    });
+  });
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    },{threshold:.08, rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('[data-reveal]').forEach(function(el,i){
+      el.style.transitionDelay = Math.min(i*40, 350)+'ms';
+      io.observe(el);
+    });
+  }else{
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // Navbar scroll shadow
+  var nav = document.querySelector('.petik-navbar');
+  if(nav){
+    var onScroll = function(){
+      nav.style.boxShadow = window.scrollY > 12
+        ? '0 14px 30px -12px rgba(0,0,0,.45)'
+        : '0 8px 24px -10px rgba(0,0,0,.35)';
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+  }
+
+  // Image fade in
+  document.querySelectorAll('img').forEach(function(img){
+    img.style.opacity = img.complete ? 1 : 0;
+    img.addEventListener('load', function(){ img.style.opacity = 1; });
+    img.addEventListener('error', function(){ img.style.opacity = 1; });
+  });
+
+  // Button ripple
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('button, .btn');
+    if(!b) return;
+    var rect = b.getBoundingClientRect();
+    var r = document.createElement('span');
+    r.style.cssText =
+      'position:absolute;border-radius:50%;pointer-events:none;'+
+      'background:rgba(255,255,255,.45);transform:translate(-50%,-50%) scale(0);'+
+      'animation:petikRipple .65s ease-out forwards;'+
+      'left:'+(e.clientX-rect.left)+'px;top:'+(e.clientY-rect.top)+'px;'+
+      'width:'+Math.max(rect.width,rect.height)*2+'px;'+
+      'height:'+Math.max(rect.width,rect.height)*2+'px;';
+    if(getComputedStyle(b).position==='static') b.style.position='relative';
+    b.style.overflow='hidden';
+    b.appendChild(r);
+    setTimeout(function(){ r.remove(); }, 700);
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var h = item.querySelector('h4, h3');
+    var p = item.querySelector('p');
+    if(!h || !p) return;
+    p.style.maxHeight='0px'; p.style.overflow='hidden'; p.style.opacity='0';
+    p.style.transition='max-height .5s cubic-bezier(.25,.8,.25,1), opacity .35s, margin-top .35s';
+    p.style.marginTop='0';
+    h.style.cursor='pointer'; h.style.display='flex'; h.style.justifyContent='space-between'; h.style.alignItems='center';
+    var caret = document.createElement('span');
+    caret.textContent='+';
+    caret.style.cssText='font-size:1.6em;color:#B36A42;transition:transform .35s ease;font-weight:300;margin-left:14px;';
+    h.appendChild(caret);
+    h.addEventListener('click', function(){
+      var open = item.classList.toggle('open');
+      if(open){ p.style.maxHeight=p.scrollHeight+'px'; p.style.opacity='1'; p.style.marginTop='10px'; caret.style.transform='rotate(45deg)'; }
+      else{ p.style.maxHeight='0px'; p.style.opacity='0'; p.style.marginTop='0'; caret.style.transform='rotate(0deg)'; }
+    });
+  });
+})();
+</script>
+
 </body>
 </html>

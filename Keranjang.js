@@ -152,25 +152,17 @@ function saveCart(){
 // ================= SUMMARY =================
 
 function updateSummary(){
-
   let subtotal = 0;
-
-  cartItems.forEach(item=>{
-
-    subtotal += item.price * item.qty;
-
-  });
-
-  const delivery = 25000;
-
+  cartItems.forEach(item=>{ subtotal += item.price * item.qty; });
+  const delivery = cartItems.length ? 25000 : 0;
   const total = subtotal + delivery;
-
-  document.getElementById("subtotal").innerText =
-    "Rp." + formatNumber(subtotal);
-
-  document.getElementById("total").innerText =
-    "Rp." + formatNumber(total);
-
+  document.getElementById("subtotal").innerText = "Rp." + formatNumber(subtotal);
+  document.getElementById("delivery").innerText = "Rp." + formatNumber(delivery);
+  document.getElementById("total").innerText = "Rp." + formatNumber(total);
+  localStorage.setItem("checkoutSubtotal", subtotal);
+  localStorage.setItem("checkoutDelivery", delivery);
+  localStorage.setItem("checkoutTotal", total);
+  if(window.petikRefreshCart) window.petikRefreshCart();
 }
 
 // ================= FORMAT =================
@@ -189,56 +181,5 @@ function goBack(){
 
 }
 
-// ================= INIT =================
-
+// ====== INIT ======
 renderCart();
-
-function updateSummary(){
-
-  let subtotal = 0;
-
-  cartItems.forEach(item=>{
-
-    subtotal += item.price * item.qty;
-
-  });
-
-  const delivery = 25000;
-
-  const total = subtotal + delivery;
-
-  // TAMPILAN
-  document.getElementById("subtotal").innerText =
-    "Rp." + formatNumber(subtotal);
-
-  document.getElementById("total").innerText =
-    "Rp." + formatNumber(total);
-
-  // =========================
-  // SIMPAN KE LOCAL STORAGE
-  // =========================
-
-  localStorage.setItem(
-    "checkoutSubtotal",
-    subtotal
-  );
-
-  localStorage.setItem(
-    "checkoutDelivery",
-    delivery
-  );
-
-  localStorage.setItem(
-    "checkoutTotal",
-    total
-  );
-
-}
-
-// ================= CHECKOUT PAGE =================
-
-function goToCheckout(){
-
-  window.location.href = "Checkout page.html";
-
-}
