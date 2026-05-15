@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Detail Produk</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="detail produk.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <h1>PETIK</h1>
+      <p>Pekalongan's Batik</p>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Tentang Batik</a></li>
+      <li><a href="#">Jenis Batik</a></li>
+      <li><a href="#">Katalog</a></li>
+      <li><a href="#">Testimoni</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+
+    <!-- CART -->
+    <a href="keranjang.html" class="cart-wrapper">
+
+      🛒
+
+      <span id="cart-count">
+        0
+      </span>
+
+    </a>
+
+  </nav>
+
+  <!-- PRODUCT -->
+  <section class="product-section">
+
+    <!-- LEFT -->
+    <div class="product-image-side">
+
+      <div class="zoom-container" id="zoomContainer">
+
+        <img
+          src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop"
+          id="productImage"
+        >
+
+      </div>
+
+      <button class="try-btn">
+        Virtual Try On
+      </button>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="product-detail-side">
+
+      <img
+        src="Aset bg/bunga 3-18-18.png"
+        class="flower-bg"
+      >
+
+      <div class="product-content">
+
+        <h1 id="product-name">
+          Batik Mega Mendung
+        </h1>
+
+        <h2 id="product-price">
+          Rp.130.000
+        </h2>
+
+        <a href="#" class="store-link">
+          <div class="store-box">
+            <h3>PETIK Official Store</h3>
+          </div>
+        </a>
+
+        <div class="desc">
+
+          <h4>Deskripsi</h4>
+
+          <p id="product-desc">
+            Batik khas Cirebon dengan motif awan elegan dan premium.
+          </p>
+
+        </div>
+
+        <!-- SIZE -->
+        <div class="size-section">
+
+          <h3>Ukuran</h3>
+
+          <div class="sizes">
+
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+            <button class="size-btn">XXL</button>
+
+          </div>
+
+        </div>
+
+        <!-- QTY -->
+        <div class="quantity-section">
+
+          <h3>Quantity</h3>
+
+          <div class="quantity-box">
+
+            <button id="minus">-</button>
+
+            <span id="quantity">
+              1
+            </span>
+
+            <button id="plus">+</button>
+
+          </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <button class="cart-btn" id="addToCart">
+
+          Add to Cart
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="detail produk.js"></script>
+
+</body>
+</html>

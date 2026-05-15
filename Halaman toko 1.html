@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko | PETIK</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Halaman toko 1.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <h1>PETIK</h1>
+      <p>Pekalongan's Batik</p>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Tentang Batik</a></li>
+      <li><a href="#">Jenis Batik</a></li>
+      <li><a href="#">Katalog</a></li>
+      <li><a href="#">Testimoni</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <section class="store-page">
+
+    <!-- ORNAMEN -->
+    <img src="bunga-kiri.png" class="flower flower-left" alt="">
+    <img src="bunga-kanan.png" class="flower flower-right" alt="">
+
+    <!-- STORE INFO -->
+    <div class="store-card">
+      <div class="store-left">
+        <div class="store-logo">Logo</div>
+
+        <div class="store-detail">
+          <h2>Unggul Jaya</h2>
+            <p class="rating-text">
+                Rating:
+
+                <a href="testimoni.html" class="rating-stars">
+                ★★★★★
+                </a>
+            </p>
+          <p>No. Telp: 0812-3456-7890</p>
+        </div>
+      </div>
+
+      <a 
+        href="https://www.google.com/maps" 
+        target="_blank" 
+        class="map-box"
+      >
+        <img src="map.png" alt="Lokasi Toko">
+      </a>
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="category-wrapper">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="kemeja">Kemeja</button>
+      <button class="category-btn" data-category="cheongsam">Cheongsam</button>
+      <button class="category-btn" data-category="daster">Daster</button>
+      <button class="category-btn" data-category="set">Set</button>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="product-grid">
+
+      <div class="product-card" data-category="kemeja">
+        <img src="produk1.jpg" alt="">
+        <h3>Kemeja Batik Biru</h3>
+        <p>Rp 150.000</p>
+      </div>
+
+      <div class="product-card" data-category="cheongsam">
+        <img src="produk2.jpg" alt="">
+        <h3>Cheongsam Batik</h3>
+        <p>Rp 250.000</p>
+      </div>
+
+      <div class="product-card" data-category="daster">
+        <img src="produk3.jpg" alt="">
+        <h3>Daster Batik</h3>
+        <p>Rp 120.000</p>
+      </div>
+
+      <div class="product-card" data-category="set">
+        <img src="produk4.jpg" alt="">
+        <h3>Set Batik Couple</h3>
+        <p>Rp 300.000</p>
+      </div>
+
+      <div class="product-card" data-category="kemeja">
+        <img src="produk5.jpg" alt="">
+        <h3>Kemeja Batik Coklat</h3>
+        <p>Rp 170.000</p>
+      </div>
+
+      <div class="product-card" data-category="daster">
+        <img src="produk6.jpg" alt="">
+        <h3>Daster Motif Bunga</h3>
+        <p>Rp 135.000</p>
+      </div>
+
+      <div class="product-card" data-category="cheongsam">
+        <img src="produk7.jpg" alt="">
+        <h3>Cheongsam Premium</h3>
+        <p>Rp 275.000</p>
+      </div>
+
+      <div class="product-card" data-category="set">
+        <img src="produk8.jpg" alt="">
+        <h3>Set Batik Keluarga</h3>
+        <p>Rp 450.000</p>
+      </div>
+
+      <div class="product-card" data-category="kemeja">
+        <img src="produk9.jpg" alt="">
+        <h3>Kemeja Batik Formal</h3>
+        <p>Rp 190.000</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="Halaman toko 1.js"></script>
+</body>
+</html>

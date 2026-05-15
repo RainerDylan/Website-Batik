@@ -1,0 +1,417 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #E8DFC7;
+}
+
+/* ================= NAVBAR ================= */
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  width:100%;
+  background:#1E2A3B;
+  padding:18px 0;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar .container{
+  width:92%;
+  max-width:1600px;
+  margin:auto;
+}
+
+.navbar .nav-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+}
+
+/* LOGO */
+
+.navbar .logo img{
+  width:150px;
+  object-fit:contain;
+}
+
+/* MENU TENGAH */
+
+.nav-menu{
+  display:flex;
+  align-items:center;
+  gap:34px;
+
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.nav-menu a,
+.nav-right a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+
+  text-decoration:none;
+  color:white;
+
+  font-family:'Poppins', sans-serif;
+  font-size:13px;
+  font-weight:500;
+
+  transition:0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-right a:hover{
+  color:#D9AE5F;
+  transform:translateY(-2px);
+}
+
+/* MENU KANAN */
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+/* ICON */
+
+.icon-home{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+}
+
+.icon-tentang{
+  width:65px;
+  height:45px;
+  object-fit:contain;
+}
+
+.icon-jenis,
+.icon-katalog,
+.icon-testimoni,
+.icon-faq,
+.icon-riwayat,
+.icon-keranjang,
+.icon-profil{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+/* TEXT */
+
+.text-home,
+.text-katalog,
+.text-testimoni,
+.text-faq,
+.text-keranjang,
+.text-profil{
+  text-align:center;
+}
+
+.text-tentang{
+  text-align:left;
+  line-height:1.2;
+}
+
+.text-jenis,
+.text-riwayat{
+  text-align:center;
+  line-height:1.2;
+}
+
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+
+@media(max-width:1200px){
+
+  .nav-menu{
+    gap:22px;
+  }
+
+  .nav-right{
+    gap:18px;
+  }
+
+  .nav-menu a,
+  .nav-right a{
+    font-size:11px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:34px;
+    height:34px;
+  }
+
+  .icon-tentang{
+    width:55px;
+    height:40px;
+  }
+
+}
+
+@media(max-width:1024px){
+
+  .navbar{
+    padding:14px 0;
+  }
+
+  .navbar .nav-wrapper{
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .navbar .logo img{
+    width:130px;
+  }
+
+  .nav-menu{
+    position:static;
+    transform:none;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+  }
+
+  .nav-right{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:12px 0;
+  }
+
+  .navbar .logo img{
+    width:110px;
+  }
+
+  .nav-menu{
+    gap:12px;
+  }
+
+  .nav-right{
+    gap:12px;
+  }
+
+  .nav-menu a,
+  .nav-right a{
+    font-size:10px;
+    gap:4px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:28px;
+    height:28px;
+  }
+
+  .icon-tentang{
+    width:45px;
+    height:32px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .nav-menu a,
+  .nav-right a{
+    width:58px;
+    font-size:9px;
+  }
+
+  .nav-menu{
+    gap:10px;
+  }
+
+  .nav-right{
+    gap:10px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:24px;
+    height:24px;
+  }
+
+  .icon-tentang{
+    width:38px;
+    height:28px;
+  }
+
+}
+
+/* ================= FAQ SECTION ================= */
+.faq-section {
+  display: flex;
+  padding: 80px 220px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 400px;
+  position: relative; /* penting untuk anchor bunga */
+}
+
+.flower-bg {
+  position: absolute;
+  left: -100px;      /* geser keluar sedikit biar natural */
+  bottom: -350px;    /* nempel bawah seperti desain */
+  width: 400px;     /* ukuran besar seperti hero decoration */
+  opacity: 0.95;
+  z-index: 0;
+  pointer-events: none;
+
+  /* efek biar hidup */
+  animation: flowerIn 1.2s ease-out forwards;
+}
+
+/* animasi muncul lembut */
+@keyframes flowerIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* KIRI */
+.faq-left {
+  width: 30%;
+}
+
+.faq-left h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #2d2d2d;
+  display: inline-block; /* penting */
+  position: relative;
+  padding-bottom: 8px; /* jarak ke garis */
+}
+
+/* Garis mengikuti panjang teks */
+.faq-left h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* ⬅️ mengikuti panjang teks */
+  height: 3px;
+  background-color: #a33a2b;
+  border-radius: 2px;
+}
+
+/* KANAN */
+.faq-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  gap: 20px;
+}
+
+/* ================= FAQ ITEM ================= */
+.faq-item {
+  width: 100%;
+  max-width: 900px;   
+  margin-left: 60px;  
+  background: #f5f5f5; 
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover biar hidup */
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 18px rgba(0,0,0,0.12);
+}
+
+/* Pertanyaan */
+.faq-question {
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Jawaban */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 0 25px;
+  transition: all 0.4s ease;
+}
+
+/* Saat aktif */
+.faq-item.active {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 15px 25px;
+  border-top: 1px solid #eee;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Rotate arrow */
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}

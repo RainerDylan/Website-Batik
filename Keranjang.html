@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Keranjang</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Keranjang.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <h1>PETIK</h1>
+      <p>Pekalongan's Batik</p>
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Beranda</a>
+      <a href="#">Tentang Batik</a>
+      <a href="#">Jenis Batik</a>
+      <a href="#">Katalog</a>
+      <a href="#">Testimoni</a>
+      <a href="#">FAQ</a>
+    </div>
+
+  </nav>
+
+  <!-- MAIN -->
+  <section class="main-wrapper">
+
+    <!-- LEFT -->
+    <div class="left-side">
+
+      <!-- HEADER -->
+      <div class="cart-header">
+
+        <button class="back-btn" onclick="goBack()">
+          &#10094;
+        </button>
+
+        <h1 class="cart-title">
+          Keranjang
+        </h1>
+
+      </div>
+
+      <!-- CART ITEMS -->
+      <div class="cart-container" id="cartContainer">
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-side">
+
+      <!-- FLOWER -->
+      <img src="Aset bg/bunga 2-18.png" class="flower-right">
+
+      <h1 class="summary-title">
+        Ringkasan <br>
+        Pemesanan
+      </h1>
+
+      <div class="summary-content">
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="subtotal">Rp.0</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Delivery cost</span>
+          <span id="delivery">Rp.25.000</span>
+        </div>
+
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <span id="total">Rp.0</span>
+        </div>
+
+        <button class="checkout-btn" onclick="goToCheckout()">
+          Check Out
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- JS -->
+  <script src="Keranjang.js"></script>
+
+</body>
+</html>

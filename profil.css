@@ -1,0 +1,460 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#E8DFC7;
+  color:#1E2A3B;
+  overflow-x:hidden;
+}
+
+h1,h2,h3{
+  font-family:'Playfair Display', serif;
+}
+
+.container{
+  width:90%;
+  max-width:1600px;
+  margin:auto;
+}
+
+/* AUTH */
+
+.auth-page{
+  min-height:100vh;
+  background:#E8DFC7;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-top:55px;
+  overflow:hidden;
+}
+
+.auth-logo{
+  width:210px;
+  margin-bottom:28px;
+  z-index:2;
+}
+
+.auth-box{
+  width:360px;
+  text-align:center;
+  z-index:2;
+}
+
+.auth-box h1{
+  font-size:28px;
+  margin-bottom:18px;
+}
+
+.auth-box input{
+  width:100%;
+  height:48px;
+  border:2px solid #B96C4D;
+  border-radius:30px;
+  padding:0 25px;
+  margin-bottom:12px;
+  font-size:15px;
+  outline:none;
+}
+
+.auth-box button,
+.role-box button,
+.logout-area button{
+  background:#B96C4D;
+  color:white;
+  border:none;
+  border-radius:25px;
+  padding:12px 35px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.switch-text{
+  font-size:13px;
+  margin:18px 0;
+  font-weight:600;
+}
+
+.switch-text span{
+  cursor:pointer;
+  color:#B96C4D;
+}
+
+/* ORNAMENT TEMPLATE */
+
+.flower{
+  position:absolute;
+  top:0;
+  width:280px;
+  height:100%;
+  background:rgba(217,174,95,.25);
+  opacity:.55;
+}
+
+.flower-left{
+  left:0;
+  border-right:2px solid rgba(217,174,95,.5);
+}
+
+.flower-right{
+  right:0;
+  border-left:2px solid rgba(217,174,95,.5);
+}
+
+/* ROLE PAGE */
+
+.role-page{
+  min-height:100vh;
+  background:#1E2A3B;
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.role-logo{
+  width:210px;
+  margin-bottom:30px;
+  z-index:2;
+}
+
+.role-box{
+  width:280px;
+  text-align:center;
+  z-index:2;
+}
+
+.role-box button{
+  width:100%;
+}
+
+.or-line{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:white;
+  margin:10px 0;
+}
+
+.or-line span{
+  height:1px;
+  background:rgba(255,255,255,.4);
+  flex:1;
+}
+
+.role-flower{
+  position:absolute;
+  top:0;
+  width:220px;
+  height:100%;
+  border:1px solid rgba(217,174,95,.4);
+}
+
+.role-left{
+  left:0;
+}
+
+.role-right{
+  right:0;
+}
+
+/* PROFILE PAGE */
+
+.profile-page{
+  display:none;
+}
+
+/* NAVBAR */
+
+.navbar{
+  width:100%;
+  background:#1E2A3B;
+  padding:18px 0;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.nav-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+}
+
+.logo img{
+  width:150px;
+}
+
+.nav-menu{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.nav-menu a,
+.nav-right a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  text-decoration:none;
+  color:white;
+  font-size:13px;
+  font-weight:500;
+  transition:.3s;
+}
+
+.nav-menu a:hover,
+.nav-right a:hover{
+  color:#D9AE5F;
+  transform:translateY(-2px);
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.icon-home{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+}
+
+.icon-tentang{
+  width:65px;
+  height:45px;
+  object-fit:contain;
+}
+
+.icon-jenis,
+.icon-katalog,
+.icon-testimoni,
+.icon-faq,
+.icon-riwayat,
+.icon-keranjang,
+.icon-profil{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+.text-tentang{
+  text-align:left;
+  line-height:1.2;
+}
+
+.text-jenis,
+.text-riwayat{
+  text-align:center;
+  line-height:1.2;
+}
+
+.text-home,
+.text-katalog,
+.text-testimoni,
+.text-faq,
+.text-keranjang,
+.text-profil{
+  text-align:center;
+}
+
+/* PROFILE CONTENT */
+
+.profile-content{
+  min-height:calc(100vh - 100px);
+  background:#E8DFC7;
+}
+
+.profile-header{
+  padding:40px 70px 45px;
+  display:flex;
+  align-items:center;
+  gap:45px;
+}
+
+.profile-circle{
+  width:125px;
+  height:125px;
+  border-radius:50%;
+  background:#1E2A3B;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.profile-circle img{
+  width:65px;
+}
+
+.profile-main-info h1{
+  font-size:34px;
+}
+
+.profile-main-info h2{
+  font-size:31px;
+}
+
+.profile-line{
+  width:360px;
+  height:2px;
+  background:#B96C4D;
+  margin:5px 0;
+}
+
+/* DATA DIRI */
+
+.profile-data{
+  width:70%;
+  margin:10px auto 0;
+}
+
+.data-row{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:40px;
+  padding:18px 0;
+  border-bottom:1px solid rgba(30,42,59,.25);
+}
+
+.data-label{
+  font-weight:600;
+  color:#1E2A3B;
+}
+
+.data-value{
+  color:#1E2A3B;
+}
+
+/* LOGOUT */
+
+.logout-area{
+  display:flex;
+  justify-content:center;
+  margin-top:45px;
+  padding-bottom:70px;
+}
+
+.logout-area button{
+  min-width:130px;
+}
+
+footer{
+  height:100px;
+  background:#1E2A3B;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1024px){
+  .nav-wrapper{
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .nav-menu{
+    position:static;
+    transform:none;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+  }
+
+  .nav-right{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .profile-data{
+    width:85%;
+  }
+}
+
+@media(max-width:768px){
+  .auth-logo,
+  .role-logo{
+    width:170px;
+  }
+
+  .auth-box{
+    width:85%;
+  }
+
+  .flower,
+  .role-flower{
+    width:90px;
+  }
+
+  .navbar{
+    padding:12px 0;
+  }
+
+  .logo img{
+    width:115px;
+  }
+
+  .nav-menu a,
+  .nav-right a{
+    font-size:10px;
+  }
+
+  .nav-menu{
+    gap:12px;
+  }
+
+  .nav-right{
+    gap:12px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:26px;
+    height:26px;
+  }
+
+  .icon-tentang{
+    width:40px;
+    height:30px;
+  }
+
+  .profile-header{
+    flex-direction:column;
+    text-align:center;
+    padding:35px 25px;
+  }
+
+  .profile-line{
+    width:260px;
+  }
+
+  .profile-data{
+    width:90%;
+  }
+
+  .data-row{
+    grid-template-columns:1fr;
+    gap:6px;
+    text-align:center;
+  }
+}

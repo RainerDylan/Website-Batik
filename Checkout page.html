@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Checkout | PETIK</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Checkout page.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <h1>PETIK</h1>
+      <p>Pekalongan's Batik</p>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Tentang Batik</a></li>
+      <li><a href="#">Jenis Batik</a></li>
+      <li><a href="#">Katalog</a></li>
+      <li><a href="#">Testimoni</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- CHECKOUT -->
+  <section class="checkout-section">
+
+    <!-- FLOWER -->
+    <img src="Aset bg/bunga 2-18.png" class="flower-bg" alt="Flower">
+
+    <!-- TITLE -->
+    <div class="checkout-title">
+
+      <a href="keranjang.html" class="back-btn">
+        &#10094;
+      </a>
+
+      <div>
+        <h1>Checkout</h1>
+        <div class="title-line"></div>
+      </div>
+
+    </div>
+
+    <!-- CONTAINER -->
+    <div class="checkout-container">
+
+      <!-- LEFT -->
+      <div class="checkout-left">
+
+        <div class="template-box">
+          <label>Nama penerima</label>
+
+          <div class="template-input">
+            Richard William
+          </div>
+        </div>
+
+        <div class="template-box">
+          <label>Nomor telepon</label>
+
+          <div class="template-input">
+            +62 812-3456-7890
+          </div>
+        </div>
+
+        <div class="template-box">
+          <label>Alamat lengkap</label>
+
+          <div class="template-input address-box">
+            Jl. Batik Nusantara No.15,
+            Pekalongan Selatan,
+            Jawa Tengah
+          </div>
+        </div>
+
+        <div class="template-box">
+          <label>Kota / Kode Pos</label>
+
+          <div class="template-input">
+            Pekalongan / 51141
+          </div>
+        </div>
+
+        <div class="template-box">
+          <label>Catatan pesanan</label>
+
+          <div class="template-input">
+            Tolong packing aman dan rapi
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="checkout-right">
+
+        <h3>Metode Pembayaran</h3>
+
+        <div class="payment-wrapper">
+
+          <!-- QRIS -->
+          <div class="payment-box active" data-method="qris">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/2489/2489756.png" alt="QRIS">
+
+            <span>QRIS</span>
+
+          </div>
+
+          <!-- DEBIT -->
+          <div class="payment-box" data-method="debit">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/179/179457.png" alt="Debit">
+
+            <span>Debit</span>
+
+          </div>
+
+          <!-- CREDIT -->
+          <div class="payment-box" data-method="credit">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/2489/2489759.png" alt="Credit">
+
+            <span>Credit</span>
+
+          </div>
+
+          <!-- VA -->
+          <div class="payment-box" data-method="va">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/2830/2830284.png" alt="VA">
+
+            <span>Virtual Account</span>
+
+          </div>
+
+        </div>
+
+        <button class="next-btn" id="nextBtn">
+          Next
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- POPUP -->
+  <div class="popup-overlay" id="popupOverlay">
+
+    <div class="popup-box">
+
+      <button class="close-popup" id="closePopup">
+        &times;
+      </button>
+
+      <!-- CONTENT -->
+      <div id="popupContent"></div>
+
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="Checkout page.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,717 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#E8DFC7;
+  color:#1E2A3B;
+  overflow-x:hidden;
+}
+
+h1,
+h2,
+h3{
+  font-family:'Playfair Display', serif;
+}
+
+.container{
+  width:90%;
+  max-width:1400px;
+  margin:auto;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  width:100%;
+  background:#1E2A3B;
+
+  padding:18px 0;
+
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar .container{
+  width:92%;
+  max-width:1600px;
+  margin:auto;
+}
+
+.navbar .nav-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  position:relative;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar .logo img{
+  width:150px;
+  object-fit:contain;
+}
+
+/* =========================
+   MENU TENGAH
+========================= */
+
+.nav-menu{
+  display:flex;
+  align-items:center;
+  gap:34px;
+
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.nav-menu a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  gap:6px;
+
+  text-decoration:none;
+  color:white;
+
+  font-family:'Poppins', sans-serif;
+  font-size:13px;
+  font-weight:500;
+
+  transition:0.3s ease;
+}
+
+.nav-menu a:hover{
+  color:#D9AE5F;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   ICON MENU TENGAH
+========================= */
+
+.icon-home{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+}
+
+.icon-tentang{
+  width:65px;
+  height:45px;
+  object-fit:contain;
+}
+
+.icon-jenis{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+.icon-katalog{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+.icon-testimoni{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+.icon-faq{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+/* =========================
+   TEXT MENU TENGAH
+========================= */
+
+.text-home,
+.text-katalog,
+.text-testimoni,
+.text-faq{
+  text-align:center;
+}
+
+.text-tentang{
+  text-align:left;
+  line-height:1.2;
+}
+
+.text-jenis{
+  text-align:center;
+  line-height:1.2;
+}
+
+/* =========================
+   MENU KANAN
+========================= */
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.nav-right a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  gap:6px;
+
+  text-decoration:none;
+  color:white;
+
+  font-family:'Poppins', sans-serif;
+  font-size:13px;
+  font-weight:500;
+
+  transition:0.3s ease;
+}
+
+.nav-right a:hover{
+  color:#D9AE5F;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   ICON MENU KANAN
+========================= */
+
+.icon-riwayat,
+.icon-keranjang,
+.icon-profil{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+/* =========================
+   TEXT MENU KANAN
+========================= */
+
+.text-riwayat{
+  text-align:center;
+  line-height:1.2;
+}
+
+.text-keranjang,
+.text-profil{
+  text-align:center;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  margin-top:35px;
+
+  background:#F7F7F7;
+  border-radius:28px;
+
+  padding:70px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:40px;
+}
+
+.hero-text{
+  width:50%;
+}
+
+.hero-subtitle{
+  color:#B36A42;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-size:68px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero p{
+  line-height:1.9;
+  margin-bottom:30px;
+}
+
+.hero button{
+  padding:14px 32px;
+
+  border:none;
+
+  background:#B36A42;
+  color:white;
+
+  border-radius:30px;
+
+  cursor:pointer;
+}
+
+.hero-image{
+  width:45%;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:520px;
+  height:320px;
+
+  object-fit:cover;
+
+  border-radius:24px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:30px;
+
+  margin-top:35px;
+}
+
+.card{
+  background:#F7F7F7;
+
+  border-radius:26px;
+
+  padding:45px;
+
+  min-height:280px;
+}
+
+.card h2{
+  font-size:48px;
+  margin-bottom:18px;
+}
+
+.card p{
+  line-height:1.8;
+}
+
+/* =========================
+   TESTIMONI
+========================= */
+
+.testimonial-section{
+  background:#1E2A3B;
+
+  margin-top:60px;
+
+  padding:70px 0;
+}
+
+.testimonial-wrapper{
+  display:flex;
+  gap:30px;
+}
+
+.testimonial-title{
+  width:20%;
+}
+
+.testimonial-title h2{
+  color:#D9AE5F;
+  font-size:58px;
+}
+
+.testimonial-cards{
+  width:80%;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:30px;
+}
+
+.testimonial-card{
+  background:#E8DFC7;
+
+  padding:40px;
+
+  border-radius:24px;
+}
+
+.testimonial-card h3{
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.testimonial-card p{
+  line-height:1.8;
+  margin-bottom:15px;
+}
+
+.testimonial-user{
+  color:#B36A42;
+  font-weight:600;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-section{
+  padding:80px 0;
+
+  display:flex;
+  gap:60px;
+}
+
+.faq-title{
+  width:25%;
+}
+
+.faq-title h2{
+  font-size:58px;
+}
+
+.faq-list{
+  width:75%;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:20px;
+}
+
+.faq-item{
+  background:#F7F7F7;
+
+  border-radius:18px;
+
+  padding:28px 35px;
+}
+
+.faq-item h4{
+  margin-bottom:10px;
+}
+
+.faq-item p{
+  color:#666;
+  line-height:1.8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#1E2A3B;
+  color:white;
+
+  text-align:center;
+
+  padding:40px 0;
+
+  margin-top:40px;
+}
+
+/* =========================
+   LAPTOP KECIL
+========================= */
+
+@media(max-width:1200px){
+
+  .nav-menu{
+    gap:22px;
+  }
+
+  .nav-right{
+    gap:18px;
+  }
+
+  .nav-menu a,
+  .nav-right a{
+    font-size:11px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:34px;
+    height:34px;
+  }
+
+  .icon-tentang{
+    width:55px;
+    height:40px;
+  }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1024px){
+
+  .navbar{
+    padding:14px 0;
+  }
+
+  .navbar .nav-wrapper{
+    flex-direction:column;
+    gap:18px;
+  }
+
+  .navbar .logo img{
+    width:130px;
+  }
+
+  /* MENU JADI 2 BARIS */
+
+  .nav-menu{
+    position:static;
+    transform:none;
+
+    width:100%;
+
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:18px;
+  }
+
+  .nav-right{
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:18px;
+  }
+
+  .nav-menu a,
+  .nav-right a{
+    font-size:11px;
+  }
+
+  .hero,
+  .testimonial-wrapper,
+  .faq-section{
+    flex-direction:column;
+  }
+
+  .hero-text,
+  .hero-image,
+  .testimonial-title,
+  .testimonial-cards,
+  .faq-title,
+  .faq-list{
+    width:100%;
+  }
+
+  .hero{
+    padding:50px;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero-image{
+    justify-content:center;
+  }
+
+  .card-grid,
+  .testimonial-cards{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .navbar{
+    border-bottom-left-radius:16px;
+    border-bottom-right-radius:16px;
+
+    padding:12px 0;
+  }
+
+  .navbar .logo img{
+    width:110px;
+  }
+
+  /* MOBILE NAV LEBIH COMPACT */
+
+  .nav-menu{
+    gap:12px;
+  }
+
+  .nav-right{
+    gap:12px;
+  }
+
+  .nav-menu a,
+  .nav-right a{
+    font-size:10px;
+    gap:4px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:28px;
+    height:28px;
+  }
+
+  .icon-tentang{
+    width:45px;
+    height:32px;
+  }
+
+  /* TEXT RIWAYAT DI MOBILE */
+
+  .text-riwayat{
+    font-size:9px;
+  }
+
+  .hero{
+    padding:35px 25px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero-image img{
+    width:100%;
+    height:250px;
+  }
+
+  .card{
+    padding:30px;
+    min-height:auto;
+  }
+
+  .card h2{
+    font-size:36px;
+  }
+
+  .testimonial-title h2,
+  .faq-title h2{
+    font-size:42px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  .navbar .nav-wrapper{
+    gap:14px;
+  }
+
+  .nav-menu{
+    gap:10px;
+  }
+
+  .nav-right{
+    gap:10px;
+  }
+
+  /* NAV SUPER COMPACT */
+
+  .nav-menu a,
+  .nav-right a{
+    width:58px;
+    font-size:9px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:24px;
+    height:24px;
+  }
+
+  .icon-tentang{
+    width:38px;
+    height:28px;
+  }
+
+  .text-tentang,
+  .text-jenis,
+  .text-riwayat{
+    line-height:1.1;
+  }
+
+  .hero{
+    padding:28px 20px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .card h2{
+    font-size:28px;
+  }
+
+  .testimonial-card h3{
+    font-size:24px;
+  }
+
+}

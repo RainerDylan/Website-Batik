@@ -1,0 +1,508 @@
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #E7DDC8;
+  overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  width:100%;
+  background:#1E2A3B;
+  padding:18px 0;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar .container{
+  width:92%;
+  max-width:1600px;
+  margin:auto;
+}
+
+.navbar .nav-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+}
+
+/* LOGO */
+
+.navbar .logo img{
+  width:150px;
+  object-fit:contain;
+}
+
+/* MENU TENGAH */
+
+.nav-menu{
+  display:flex;
+  align-items:center;
+  gap:34px;
+
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.nav-menu a,
+.nav-right a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+
+  text-decoration:none;
+  color:white;
+
+  font-family:'Poppins', sans-serif;
+  font-size:13px;
+  font-weight:500;
+
+  transition:0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-right a:hover{
+  color:#D9AE5F;
+  transform:translateY(-2px);
+}
+
+/* MENU KANAN */
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+/* ICON */
+
+.icon-home{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+}
+
+.icon-tentang{
+  width:65px;
+  height:45px;
+  object-fit:contain;
+}
+
+.icon-jenis,
+.icon-katalog,
+.icon-testimoni,
+.icon-faq,
+.icon-riwayat,
+.icon-keranjang,
+.icon-profil{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+/* TEXT */
+
+.text-home,
+.text-katalog,
+.text-testimoni,
+.text-faq,
+.text-keranjang,
+.text-profil{
+  text-align:center;
+}
+
+.text-tentang{
+  text-align:left;
+  line-height:1.2;
+}
+
+.text-jenis,
+.text-riwayat{
+  text-align:center;
+  line-height:1.2;
+}
+
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+
+@media(max-width:1200px){
+
+  .nav-menu{
+    gap:22px;
+  }
+
+  .nav-right{
+    gap:18px;
+  }
+
+  .nav-menu a,
+  .nav-right a{
+    font-size:11px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:34px;
+    height:34px;
+  }
+
+  .icon-tentang{
+    width:55px;
+    height:40px;
+  }
+
+}
+
+@media(max-width:1024px){
+
+  .navbar{
+    padding:14px 0;
+  }
+
+  .navbar .nav-wrapper{
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .navbar .logo img{
+    width:130px;
+  }
+
+  .nav-menu{
+    position:static;
+    transform:none;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+  }
+
+  .nav-right{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:12px 0;
+  }
+
+  .navbar .logo img{
+    width:110px;
+  }
+
+  .nav-menu{
+    gap:12px;
+  }
+
+  .nav-right{
+    gap:12px;
+  }
+
+  .nav-menu a,
+  .nav-right a{
+    font-size:10px;
+    gap:4px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:28px;
+    height:28px;
+  }
+
+  .icon-tentang{
+    width:45px;
+    height:32px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .nav-menu a,
+  .nav-right a{
+    width:58px;
+    font-size:9px;
+  }
+
+  .nav-menu{
+    gap:10px;
+  }
+
+  .nav-right{
+    gap:10px;
+  }
+
+  .icon-home,
+  .icon-jenis,
+  .icon-katalog,
+  .icon-testimoni,
+  .icon-faq,
+  .icon-riwayat,
+  .icon-keranjang,
+  .icon-profil{
+    width:24px;
+    height:24px;
+  }
+
+  .icon-tentang{
+    width:38px;
+    height:28px;
+  }
+
+}
+/* =========================
+   MENU TENGAH
+========================= */
+
+.nav-menu{
+  display:flex;
+  align-items:center;
+  gap:34px;
+
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.nav-menu a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  gap:6px;
+
+  text-decoration:none;
+  color:white;
+
+  font-family:'Poppins', sans-serif;
+  font-size:13px;
+  font-weight:500;
+
+  transition:0.3s ease;
+}
+
+.nav-menu a:hover{
+  color:#D9AE5F;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   ICON MENU TENGAH
+========================= */
+
+.icon-home{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+}
+
+.icon-tentang{
+  width:65px;
+  height:45px;
+  object-fit:contain;
+}
+
+.icon-jenis{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+.icon-katalog{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+.icon-testimoni{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+.icon-faq{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+
+/* ================= SECTION ================= */
+
+.jenis-batik{
+  position: relative;
+  padding: 90px 70px 120px;
+  min-height: 100vh;
+}
+
+/* BUNGA */
+
+.flower{
+  position: absolute;
+  width: 240px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.flower-left{
+  left: -50px;
+  top: 180px;
+}
+
+.flower-right{
+  right: -50px;
+  top: -30px;
+  transform: scale(-1, -1);
+  position: absolute;
+  z-index: 1;
+}
+
+/* TITLE */
+
+.section-title{
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section-title h2{
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  color: #1F2A3C;
+}
+
+.line{
+  width: 300px;
+  height: 5px;
+  background: #B96B4A;
+  margin: 20px auto 35px;
+}
+
+.section-title p{
+  font-size: 17px;
+  line-height: 2;
+  color: #303030;
+}
+
+/* ================= CARD ================= */
+
+.card-wrapper{
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.batik-card{
+  position: relative;
+  width: 370px;
+  background: #F5EFE4;
+  border-radius: 30px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.batik-card:hover{
+  transform: translateY(-10px);
+}
+
+.batik-card img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* ICON CIRCLE */
+
+.icon-circle{
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: #C7A24B;
+
+  border: 5px solid #F5EFE4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle img{
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.cap{
+  background: #B96B4A;
+}
+
+.printing{
+  background: #1F2A3C;
+}
+
+/* CONTENT */
+
+.card-content{
+  padding: 80px 30px 35px;
+  text-align: center;
+}
+
+.card-content h3{
+  font-family: 'Playfair Display', serif;
+  font-size: 55px;
+  color: #1F2A3C;
+  margin-bottom: 20px;
+}
+
+.card-content p{
+  color: #333;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+

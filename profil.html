@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | PETIK</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profil.css">
+</head>
+<body>
+
+  <!-- SIGN IN -->
+  <section class="auth-page" id="signinPage">
+
+    <img src="NAVBAR/logo-18.png" class="auth-logo" alt="PETIK">
+
+    <div class="flower flower-left"></div>
+    <div class="flower flower-right"></div>
+
+    <div class="auth-box">
+      <h1>Sign in</h1>
+
+      <input type="email" id="signinEmail" placeholder="E-mail">
+      <input type="password" id="signinPassword" placeholder="Password">
+
+      <p class="switch-text">
+        Don’t have an account?
+        <span onclick="showRolePage()">sign up here</span>
+      </p>
+
+      <button onclick="signIn()">Sign In</button>
+    </div>
+
+  </section>
+
+  <!-- ROLE CHOICE -->
+  <section class="role-page" id="rolePage">
+
+    <div class="role-flower role-left"></div>
+    <div class="role-flower role-right"></div>
+
+    <img src="NAVBAR/logo-18.png" class="role-logo" alt="PETIK">
+
+    <div class="role-box">
+      <button onclick="chooseRole('Buyer')">Are you a Buyer?</button>
+
+      <div class="or-line">
+        <span></span>
+        <p>or</p>
+        <span></span>
+      </div>
+
+      <button onclick="chooseRole('Seller')">Are you a Seller?</button>
+    </div>
+
+  </section>
+
+  <!-- SIGN UP -->
+  <section class="auth-page" id="signupPage">
+
+    <img src="NAVBAR/logo-18.png" class="auth-logo" alt="PETIK">
+
+    <div class="flower flower-left"></div>
+    <div class="flower flower-right"></div>
+
+    <div class="auth-box">
+      <h1>Sign Up</h1>
+
+      <input type="text" id="signupName" placeholder="Name">
+      <input type="email" id="signupEmail" placeholder="E-mail">
+      <input type="password" id="signupPassword" placeholder="Password">
+      <input type="text" id="signupPhone" placeholder="Phone Number">
+      <input type="text" id="signupAddress" placeholder="Address">
+
+      <button onclick="signUp()">Create Account</button>
+    </div>
+
+  </section>
+
+  <!-- PROFILE PAGE -->
+  <section class="profile-page" id="profilePage">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+      <div class="container nav-wrapper">
+
+        <div class="logo">
+          <img src="NAVBAR/logo-18.png" alt="PETIK Logo">
+        </div>
+
+        <div class="nav-menu">
+
+          <a href="index.html" class="nav-home">
+            <img src="NAVBAR/Home.png" alt="" class="icon-home">
+            <span class="text-home">Beranda</span>
+          </a>
+
+          <a href="Tentang batik pekalongan.html" class="nav-tentang">
+            <img src="NAVBAR/tentang batik pekalongan.png" alt="" class="icon-tentang">
+            <span class="text-tentang">Tentang Batik<br>Pekalongan</span>
+          </a>
+
+          <a href="Jenis batik page.html" class="nav-jenis">
+            <img src="NAVBAR/Jenis Batik.png" alt="" class="icon-jenis">
+            <span class="text-jenis">Jenis Batik<br>Pekalongan</span>
+          </a>
+
+          <a href="Catalogue.html" class="nav-katalog">
+            <img src="NAVBAR/Catalogue.png" alt="" class="icon-katalog">
+            <span class="text-katalog">Katalog</span>
+          </a>
+
+          <a href="#" class="nav-testimoni">
+            <img src="NAVBAR/Testimoni.png" alt="" class="icon-testimoni">
+            <span class="text-testimoni">Testimoni</span>
+          </a>
+
+          <a href="FAQ.html" class="nav-faq">
+            <img src="NAVBAR/FAQ.png" alt="" class="icon-faq">
+            <span class="text-faq">FAQ</span>
+          </a>
+
+        </div>
+
+        <div class="nav-right">
+
+          <a href="#" class="nav-riwayat">
+            <img src="NAVBAR/Riwayat.png" alt="" class="icon-riwayat">
+            <span class="text-riwayat">Riwayat<br>Pemesanan</span>
+          </a>
+
+          <a href="#" class="nav-keranjang">
+            <img src="NAVBAR/Keranjang.png" alt="" class="icon-keranjang">
+            <span class="text-keranjang">Keranjang</span>
+          </a>
+
+          <a href="profile.html" class="nav-profil">
+            <img src="NAVBAR/Profile.png" alt="" class="icon-profil">
+            <span class="text-profil">Profil</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+    <!-- PROFILE CONTENT -->
+    <main class="profile-content">
+
+      <div class="profile-header">
+
+        <div class="profile-circle">
+          <img src="NAVBAR/Profile.png" alt="">
+        </div>
+
+        <div class="profile-main-info">
+          <h1 id="profileName">Name</h1>
+          <div class="profile-line"></div>
+          <h2 id="profileAddress">Address</h2>
+        </div>
+
+      </div>
+
+      <div class="profile-data">
+
+        <div class="data-row">
+          <p class="data-label">Nama Lengkap</p>
+          <p class="data-value" id="dataName">Name</p>
+        </div>
+
+        <div class="data-row">
+          <p class="data-label">E-mail</p>
+          <p class="data-value" id="dataEmail">user@email.com</p>
+        </div>
+
+        <div class="data-row">
+          <p class="data-label">Nomor Telepon</p>
+          <p class="data-value" id="dataPhone">-</p>
+        </div>
+
+        <div class="data-row">
+          <p class="data-label">Alamat</p>
+          <p class="data-value" id="dataAddress">Address</p>
+        </div>
+
+        <div class="data-row">
+          <p class="data-label">Role</p>
+          <p class="data-value" id="dataRole">Buyer</p>
+        </div>
+
+        <div class="data-row">
+          <p class="data-label">Status Akun</p>
+          <p class="data-value">Member PETIK</p>
+        </div>
+
+      </div>
+
+      <div class="logout-area">
+        <button onclick="logout()">Log out</button>
+      </div>
+
+    </main>
+
+    <footer></footer>
+
+  </section>
+
+  <script src="profil.js"></script>
+</body>
+</html>

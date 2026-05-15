@@ -1,0 +1,373 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#1F2B3D;
+  overflow:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  width:100%;
+  height:105px;
+  background:#1F2B3D;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 70px;
+  border-bottom-left-radius:40px;
+  position:relative;
+  z-index:10;
+}
+
+.logo h1{
+  font-family:'Playfair Display', serif;
+  color:#D5A84D;
+  font-size:56px;
+  line-height:44px;
+  font-style:italic;
+  font-weight:700;
+}
+
+.logo p{
+  color:white;
+  font-size:14px;
+  letter-spacing:2px;
+}
+
+.nav-links{
+  display:flex;
+  gap:45px;
+}
+
+.nav-links a{
+  color:white;
+  font-size:18px;
+  font-weight:400;
+}
+
+/* ================= MAIN ================= */
+
+.main-wrapper{
+  display:flex;
+  width:100%;
+  height:calc(100vh - 105px);
+}
+
+/* ================= LEFT ================= */
+
+.left-side{
+  width:60%;
+  background:#E8DFC7;
+  padding:38px 70px 50px;
+  overflow-y:auto;
+}
+
+.left-side::-webkit-scrollbar{
+  width:7px;
+}
+
+.left-side::-webkit-scrollbar-thumb{
+  background:#B56D47;
+  border-radius:20px;
+}
+
+/* ================= HEADER ================= */
+
+.cart-header{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-bottom:35px;
+}
+
+.back-btn{
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:#B56D47;
+  color:white;
+  font-size:26px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cart-title{
+  font-family:'Playfair Display', serif;
+  font-size:60px;
+  color:#1F2B3D;
+  line-height:60px;
+}
+
+/* ================= CART ================= */
+
+.cart-container{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+.cart-item{
+  width:100%;
+  min-height:275px;
+  border:2px solid #2B3443;
+  border-radius:35px;
+  padding:18px;
+  display:flex;
+  gap:35px;
+  background:#E8DFC7;
+}
+
+/* ================= IMAGE ================= */
+
+.product-image{
+  width:270px;
+  min-width:270px;
+  height:235px;
+  border-radius:25px;
+  overflow:hidden;
+  background:#1F2B3D;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ================= INFO ================= */
+
+.product-info{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.product-link{
+  width:fit-content;
+}
+
+.product-link h2{
+  font-size:38px;
+  color:#1F2B3D;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.product-link:hover h2{
+  color:#B56D47;
+}
+
+.product-info p{
+  font-size:17px;
+  color:#434343;
+  margin-top:6px;
+  max-width:500px;
+  line-height:28px;
+}
+
+.price{
+  margin-top:45px;
+  font-size:34px;
+  font-weight:600;
+  color:#1F2B3D;
+}
+
+/* ================= QUANTITY ================= */
+
+.qty-wrapper{
+  display:flex;
+  align-items:center;
+  margin-top:18px;
+}
+
+.qty-btn{
+  width:35px;
+  height:35px;
+  border:none;
+  background:#B56D47;
+  color:white;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.minus{
+  border-radius:20px 0 0 20px;
+}
+
+.plus{
+  border-radius:0 20px 20px 0;
+}
+
+.qty-number{
+  width:50px;
+  height:35px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  color:#1F2B3D;
+}
+
+/* ================= RIGHT ================= */
+
+.right-side{
+  width:40%;
+  background:#B56D47;
+
+  /* KONTEN LEBIH KE KIRI */
+  padding:45px 180px 45px 55px;
+
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+/* FLOWER */
+
+.flower-right{
+  position:absolute;
+  right:-200px;
+  top:-20px;
+  height:85%;
+  opacity:0.8;
+  pointer-events:none;
+  transform: scaleX(-1);
+}
+
+/* ================= SUMMARY ================= */
+
+.summary-title{
+  font-family:'Playfair Display', serif;
+  font-size:48px;
+  line-height:56px;
+  color:#FFF0E2;
+  position:relative;
+  z-index:2;
+  margin-bottom:55px;
+}
+
+.summary-content{
+  position:relative;
+  z-index:2;
+}
+
+.summary-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+  gap:40px;
+}
+
+.summary-row span{
+  font-size:20px;
+  color:#FFF0E2;
+}
+
+.total-row{
+  margin-top:55px;
+}
+
+.total-row span{
+  font-size:27px;
+  font-weight:600;
+}
+
+/* ================= BUTTON ================= */
+
+.checkout-btn{
+  margin-top:45px;
+  width:200px;
+  height:55px;
+  border:none;
+  border-radius:40px;
+  background:#EFE2C7;
+  color:#B56D47;
+  font-size:24px;
+  cursor:pointer;
+  transition:0.25s ease;
+  font-family:'Poppins', sans-serif;
+}
+
+/* HOVER */
+
+.checkout-btn:hover{
+  box-shadow:0 4px 12px rgba(0,0,0,0.12);
+  transform:translateY(-2px);
+}
+
+/* CLICK */
+
+.checkout-btn:active{
+  background:#d7c3a0;
+  transform:scale(0.97);
+}
+
+/* ================= EMPTY CART ================= */
+
+.empty-cart{
+  width:100%;
+  height:250px;
+  border:2px dashed #bca98f;
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:#7c7469;
+  font-weight:500;
+  background:#efe6d2;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+  body{
+    overflow:auto;
+  }
+
+  .main-wrapper{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .left-side,
+  .right-side{
+    width:100%;
+    height:auto;
+    position:relative;
+  }
+
+  .cart-item{
+    flex-direction:column;
+  }
+
+  .product-image{
+    width:100%;
+  }
+
+}

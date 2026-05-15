@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Testimoni PETIK</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="testimoni.css">
+</head>
+<body>
+
+  <!-- SECTION TESTIMONI -->
+  <section class="testimonial-section">
+
+    <h1 class="section-title">Testimoni</h1>
+
+    <!-- SUMMARY -->
+    <div class="review-summary">
+
+      <div class="summary-left">
+        <h2 id="averageRating">4.8</h2>
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <p><span id="totalReviews">128</span> Reviews</p>
+      </div>
+
+      <div class="summary-right">
+
+        <!-- BAR -->
+        <div class="rating-row">
+          <span>5</span>
+          <div class="bar">
+            <div class="fill fill-5"></div>
+          </div>
+        </div>
+
+        <div class="rating-row">
+          <span>4</span>
+          <div class="bar">
+            <div class="fill fill-4"></div>
+          </div>
+        </div>
+
+        <div class="rating-row">
+          <span>3</span>
+          <div class="bar">
+            <div class="fill fill-3"></div>
+          </div>
+        </div>
+
+        <div class="rating-row">
+          <span>2</span>
+          <div class="bar">
+            <div class="fill fill-2"></div>
+          </div>
+        </div>
+
+        <div class="rating-row">
+          <span>1</span>
+          <div class="bar">
+            <div class="fill fill-1"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- REVIEW GRID -->
+    <div class="review-grid" id="reviewGrid">
+
+      <!-- CARD -->
+      <div class="review-card" onclick="openPopup(0)">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400"
+        class="profile-img">
+
+        <h3>Sarah</h3>
+
+        <div class="card-stars">
+          ★★★★★
+        </div>
+
+        <p>
+          Batiknya bagus banget dan kualitas kainnya premium.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=400"
+        class="product-img">
+      </div>
+
+      <!-- CARD -->
+      <div class="review-card" onclick="openPopup(1)">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400"
+        class="profile-img">
+
+        <h3>Kevin</h3>
+
+        <div class="card-stars">
+          ★★★★☆
+        </div>
+
+        <p>
+          Packaging rapi dan pengiriman cepat.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=400"
+        class="product-img">
+      </div>
+
+    </div>
+
+    <!-- ADD REVIEW -->
+    <div class="add-review">
+
+      <h2>Tambahkan Testimoni</h2>
+
+      <form id="reviewForm">
+
+        <input type="text" id="username"
+        placeholder="Username" required>
+
+        <textarea id="reviewText"
+        placeholder="Tulis pengalamanmu..." required></textarea>
+
+        <!-- STAR SELECT -->
+        <div class="star-select">
+
+          <span onclick="setRating(1)">★</span>
+          <span onclick="setRating(2)">★</span>
+          <span onclick="setRating(3)">★</span>
+          <span onclick="setRating(4)">★</span>
+          <span onclick="setRating(5)">★</span>
+
+        </div>
+
+        <!-- IMAGE -->
+        <label class="upload-box">
+
+          <i class="fa-solid fa-image"></i>
+          Upload Gambar Produk
+
+          <input type="file"
+          id="imageUpload"
+          multiple
+          accept="image/*">
+
+        </label>
+
+        <button type="submit">
+          Submit Review
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup">
+
+    <div class="popup-content">
+
+      <span class="close-btn"
+      onclick="closePopup()">
+        &times;
+      </span>
+
+      <div id="popupBody"></div>
+
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="testimoni.js"></script>
+
+</body>
+</html>
